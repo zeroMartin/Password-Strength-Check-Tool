@@ -1,7 +1,54 @@
+import time
+from termcolor import colored
 
 password = input('Enter password: ')
-#password = '1234'
-print('Password: ', password)
+#print('Password: ', password)
+
+U = 'U'
+L = 'L'
+N = 'N'
+S = 'S'
+
+def cliTest():
+
+    passed = colored('Passed', 'green')
+    failed = colored('Failed', 'red')
+
+    if N in character_type:
+        print('Password has numbers? ...', end = '')
+        print(passed)
+    else:
+        print('Password has numbers? ...', end = '')
+        print(failed)
+
+    if U in character_type:
+        print('Password has upper case letters? ...', end = '')
+        print(passed)
+    else:
+        print('Password has upper case letters? ...', end = '')
+        print(failed)
+
+    if L in character_type:
+        print('Password has lower case letters? ...', end = '')
+        print(passed)
+    else:
+        print('Password has lower case letters? ...', end = '')
+        print(failed)
+
+    if S in character_type:
+        print('Password has special characters? ...', end = '')
+        print(passed)
+    else:
+        print('Password has special characters? ...', end = '')
+        print(failed)
+
+    if password_length >= 8:
+        print('Password has more then 8 characters? ...', end = '')
+        print(passed)
+    else:
+        print('Password has more then 8 characters? ...', end = '')
+        print(failed)
+    return
 
 def check_character_type():
     character_type = []
@@ -21,21 +68,9 @@ def check_character_type():
             character_type.append(special_character)
     return character_type
 
-character_type = check_character_type()
-print(character_type)
-
 def check_password_length():
     password_length = len(password)
     return password_length
-
-password_length = check_password_length()
-print(password_length)
-
-U = 'U'
-L = 'L'
-N = 'N'
-S = 'S'
-
 
 def check_strength():
 
@@ -130,5 +165,13 @@ def check_strength():
         else:
             print('Password is strong')
     return
+
+character_type = check_character_type()
+#print(character_type)
+
+password_length = check_password_length()
+#print(password_length)
+
+cliTest()
 
 check_strength()
