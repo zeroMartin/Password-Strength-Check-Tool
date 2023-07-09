@@ -41,7 +41,7 @@ if N in character_type and U not in character_type and L not in character_type a
     print('Password consits only of numbers')
 
     if password_length <= 15:
-        print("Your password is to weak and failed.")
+        print('Your password is to weak and failed.')
     elif password_length == 16:
         print('Password is weak')
     elif password_length >= 17 and password_length <= 18:
@@ -49,62 +49,84 @@ if N in character_type and U not in character_type and L not in character_type a
     else:
         print('Password is strong')
 
-# Only upper case letters in password
-if N not in character_type and U in character_type and L not in character_type and S not in character_type:
-    print('Password consist only of upper case letters')
+def check_strength():
+    # Only upper case letters in password
+    if N not in character_type and U in character_type and L not in character_type and S not in character_type:
+        print('Password consist only of upper case letters')
 
-    if password_length <= 10:
-        print("Your password is to weak and failed.")
-    elif password_length == 11:
-        print('Password is weak')
-    elif password_length == 12:
-        print('Password is intermediate.')
-    else:
-        print('Password is strong')
+        if password_length <= 10:
+            print('Your password is to weak and failed.')
+        elif password_length == 11:
+            print('Password is weak')
+        elif password_length == 12:
+            print('Password is intermediate.')
+        else:
+            print('Password is strong')
 
-# Only lower case letters in password
-if N not in character_type and U not in character_type and L in character_type and S not in character_type:
-    print('Password consist only of lower case letters')
+    # Only lower case letters in password
+    if N not in character_type and U not in character_type and L in character_type and S not in character_type:
+        print('Password consist only of lower case letters')
 
-    if password_length <= 10:
-        print("Your password is to weak and failed.")
-    elif password_length == 11:
-        print('Password is weak')
-    elif password_length == 12:
-        print('Password is intermediate.')
-    else:
-        print('Password is strong')
+        if password_length <= 10:
+            print('Your password is to weak and failed.')
+        elif password_length == 11:
+            print('Password is weak')
+        elif password_length == 12:
+            print('Password is intermediate.')
+        else:
+            print('Password is strong')
 
-# Upper and lower case letters in password
-if N not in character_type and U in character_type and L in character_type and S not in character_type:
-    print('Password consist of upper and lower case letters')
+    # Upper and lower case letters in password
+    if N not in character_type and U in character_type and L in character_type and S not in character_type:
+        print('Password consist of upper and lower case letters')
 
-    if password_length <= 9:
-        print("Your password is to weak and failed.")
-    else:
-        print('Password is strong')
+        if password_length <= 9:
+            print('Your password is to weak and failed.')
+        else:
+            print('Password is strong')
 
-# Numbers, Upper and lower case letters in password
-if N in character_type and U in character_type and L in character_type and S not in character_type:
-    print('Password consist of numbers, upper and lower case letters')
+    # Upper case letters and numbers in password
+    if N in character_type and U in character_type and L not in character_type and S not in character_type:
+        print('Password consist of upper case letters and numbers')
 
-    if password_length <= 8:
-        print("Your password is to weak and failed.")
-    elif password_length ==9:
-        print("Your password is weak")
-    elif password_length == 10:
-        print('Your password is intermediate.')
-    else:
-        print('Password is strong')
+        if password_length <= 9:
+            print('Your password is to weak and failed.')
+        else:
+            print('Password is strong')
 
-# Numbers, Upper and lower case letters and special characters in password
-if N in character_type and U in character_type and L in character_type and S in character_type:
-    print('Password consist of numbers, upper and lower case letters and special characters')
 
-    if password_length <= 8:
-        print("Your password is to weak and failed.")
-    elif password_length ==9:
-        print("Your password is intermediate")
-    else:
-        print('Password is strong')
+    # Lower case letters in password
+    if N in character_type and U not in character_type and L in character_type and S not in character_type:
+        print('Password consist of lower case letters and numbers')
 
+        if password_length <= 9:
+            print('Your password is to weak and failed.')
+        else:
+            print('Password is strong')
+
+    # Numbers, Upper and lower case letters in password
+    if N in character_type and U in character_type and L in character_type and S not in character_type:
+        print('Password consist of numbers, upper and lower case letters')
+
+        if password_length <= 8:
+            print('Your password is to weak and failed.')
+        elif password_length ==9:
+            print('Your password is weak')
+        elif password_length == 10:
+            print('Your password is intermediate.')
+        else:
+            print('Password is strong')
+
+    # Numbers, Upper and lower case letters and special characters in password
+    if N in character_type and U in character_type and L in character_type and S in character_type:
+        print('Password consist of numbers, upper and lower case letters and special characters')
+
+        if password_length <= 8:
+            print('Your password is to weak and failed.')
+        elif password_length ==9:
+            print('Your password is intermediate')
+        else:
+            print('Password is strong')
+    return
+
+check_strength()
