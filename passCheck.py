@@ -2,7 +2,6 @@ import time
 from termcolor import colored
 
 password = input('Enter password: ')
-#print('Password: ', password)
 
 U = 'U'
 L = 'L'
@@ -20,34 +19,39 @@ def cliTest():
     else:
         print('Password has numbers? ...', end = '')
         print(failed)
-
+    time.sleep(0.5)
+    
     if U in character_type:
         print('Password has upper case letters? ...', end = '')
         print(passed)
     else:
         print('Password has upper case letters? ...', end = '')
         print(failed)
-
+    time.sleep(0.5)
+    
     if L in character_type:
         print('Password has lower case letters? ...', end = '')
         print(passed)
     else:
         print('Password has lower case letters? ...', end = '')
         print(failed)
-
+    time.sleep(0.5)
+    
     if S in character_type:
         print('Password has special characters? ...', end = '')
         print(passed)
     else:
         print('Password has special characters? ...', end = '')
         print(failed)
-
+    time.sleep(0.5)
+    
     if password_length >= 8:
         print('Password has more then 8 characters? ...', end = '')
         print(passed)
     else:
         print('Password has more then 8 characters? ...', end = '')
         print(failed)
+    time.sleep(0.5)
     return
 
 def check_character_type():
