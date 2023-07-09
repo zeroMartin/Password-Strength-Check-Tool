@@ -36,20 +36,22 @@ L = 'L'
 N = 'N'
 S = 'S'
 
-# Only numbers in password
-if N in character_type and U not in character_type and L not in character_type and S not in character_type:
-    print('Password consits only of numbers')
-
-    if password_length <= 15:
-        print('Your password is to weak and failed.')
-    elif password_length == 16:
-        print('Password is weak')
-    elif password_length >= 17 and password_length <= 18:
-        print('Password is intermediate.')
-    else:
-        print('Password is strong')
 
 def check_strength():
+
+    # Only numbers in password
+    if N in character_type and U not in character_type and L not in character_type and S not in character_type:
+        print('Password consits only of numbers')
+
+        if password_length <= 15:
+            print('Your password is to weak and failed.')
+        elif password_length == 16:
+            print('Password is weak')
+        elif password_length >= 17 and password_length <= 18:
+            print('Password is intermediate.')
+        else:
+            print('Password is strong')
+
     # Only upper case letters in password
     if N not in character_type and U in character_type and L not in character_type and S not in character_type:
         print('Password consist only of upper case letters')
