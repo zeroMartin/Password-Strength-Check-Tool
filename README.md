@@ -7,7 +7,7 @@ To run the code you must have the following python modules installed:
 - termcolor
 - time
 
-To execute the code tun the command:
+To execute the code run the command:
 ```
  python3 passCheck.py
 ```
